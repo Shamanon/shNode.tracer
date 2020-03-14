@@ -1,15 +1,15 @@
 Communication Interface for Tracer MT-5
 =======================================
 
-This is an Arduino and Python library for interfacing with the SainSonic Tracer
+This is a fork of xxv/tracer library for interfacing with the SainSonic Tracer
 series solar charge regulators.
 
-This was designed to work with a "SainSonic MPPT Tracer 1215RN Solar Charge
-Controller Regulator 12/24V INPUT 10A"
+This fork will be trimmed down to use on a raspberry pi zero and integrate into my shNode system.
 
-The protocol is described in [Protocol Tracer MT-5][tracer-doc] (copy here in
-`docs/`) and implemented in Python and Arduino. There's also a copy of the C
-CRC as stated in the docs by itself with a test.
+The two main scripts will be:
+
+status.py -> output status of charge controller to xml format
+log.py -> log info on power system
 
 Physical Interface
 ------------------
@@ -40,10 +40,10 @@ and -3.3V is 1).
 License
 -------
 
-The Arduino and C code is mostly incomplete and as such is placed in the
-[public domain][].
+All code by Shamanon is free to use.
 
-The Python library is a bit more complete and is licensed under the [LGPL v3][LGPL]
+
+The Python library by XXV is a bit more complete and is licensed under the [LGPL v3][LGPL]
 
 [8P8C]: https://en.wikipedia.org/wiki/Modular_connector#8P8C
 [RS-232]: https://en.wikipedia.org/wiki/RS-232#Voltage_levels
