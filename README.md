@@ -13,6 +13,8 @@ status -> output formatted status of charge controller
 data -> output data as python string (make XML in the future?)
 tracer_log -> log info on power system
 
+Work on this project will be moved to sHome umbrella project: shamanon/sNode.tracer
+
 Physical Interface
 ------------------
 
