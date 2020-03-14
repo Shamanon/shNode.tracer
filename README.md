@@ -1,15 +1,17 @@
-Communication Interface for Tracer MT-5
+shNode Module for Tracer MT-5
 =======================================
 
 This is a fork of xxv/tracer library for interfacing with the SainSonic Tracer
 series solar charge regulators.
 
-This fork will be trimmed down to use on a raspberry pi zero and integrate into my shNode system.
+This software is inteded to run on a raspberry pi zero. It will work on all
+Linuxes with rs232
 
-The two main scripts will be:
+The main scripts are:
 
-status.py -> output status of charge controller to xml format
-log.py -> log info on power system
+status -> output formatted status of charge controller
+data -> output data as python string (make XML in the future?)
+tracer_log -> log info on power system
 
 Physical Interface
 ------------------
