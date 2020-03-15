@@ -3,7 +3,7 @@
 # shNode Module: tracer/data
 # ouput status of Tracer Solar Charge Controller in XML format
 
-import serial
+import serial, jxmlease
 from tracer import Tracer, TracerSerial, QueryCommand
 
 # Set Serial interface path
@@ -17,5 +17,10 @@ query = QueryCommand()
 t_ser.send_command(query)
 result = t_ser.receive_result()
 
-#print "Raw bytes: %s" % ", ".join(map(lambda a: "%0X" % (a), result.data))
-print result
+# format the output string for xml parsing
+formatted = str(result).replace(': ', '\': \'')
+formatted = formatted.replace('QueryResult{', '{\'tracer\': {\'')
+formatted = formatted.replace(', ', '\', \'')
+formatted = formatted.replace('}', '\'}}')
+
+print(jxmlease.emit_xml(eval(formatted)))
