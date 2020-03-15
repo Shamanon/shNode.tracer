@@ -18,7 +18,6 @@ t_ser.send_command(query)
 result = t_ser.receive_result()
 
 #print "Raw bytes: %s" % ", ".join(map(lambda a: "%0X" % (a), result.data))
-print
 formatted = str(result).replace('QueryResult{', '')
-formatted = formatted.replace('}', '\n')
+formatted = formatted.replace('}', '')
 print formatted.replace(', ', '\n')
