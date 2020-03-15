@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# shNode Module: tracer/data
+# ouput status of Tracer Solar Charge Controller in XML format
+
 import serial
 from tracer import Tracer, TracerSerial, QueryCommand
 

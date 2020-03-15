@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# shNode Module: tracer/status
+# output status of Tracer Solar Charge Controller in human readable output
+
 import serial
 from tracer import Tracer, TracerSerial, QueryCommand
 
